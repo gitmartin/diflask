@@ -1,0 +1,12 @@
+Name: 111
+Age: fsef
+
+How many eyes do you have?
+3
+
+Which fruit do you like best?
+banana
+
+Do you like cupcakes?
+no
+
