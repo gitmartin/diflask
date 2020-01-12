@@ -15,7 +15,7 @@ def index():
 	app.myvars['ticker'] = request.form['myticker']
 	print(app.myvars['ticker'])
 
-	script_chart, div_chart = plotty()
+	script_chart, div_chart = plotty(app.myvars['ticker'])
 	#print("@#",script_chart)
 
 
@@ -25,9 +25,9 @@ def index():
 
 
 
-def plotty():
+def plotty(ticker):
 	import getbokeh
-	fig = getbokeh.bokeh()
+	fig = getbokeh.bokeh(ticker)
 	return fig
 
 
