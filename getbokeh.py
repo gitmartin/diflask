@@ -20,8 +20,9 @@ def bokeh():
 
     x = np.arange(0,10,0.1)
     y = np.sin(x)
-    r = p.line(data.date, data.close, line_width=1)
- #   r = p.line(x,y, line_width=1)
+ #   r = p.line(data.date, data.close, line_width=1)
+    r = p.line(x,y, line_width=1)
    # show(p, notebook_handle=True)
 
+    print("end of bokeh() fcn")
     return components(p)
