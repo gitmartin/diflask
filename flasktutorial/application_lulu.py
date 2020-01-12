@@ -25,13 +25,13 @@ def index_lulu():
         f.write('Name: %s\n'%(app_lulu.vars['name']))
         f.write('Age: %s\n\n'%(app_lulu.vars['age']))
         f.close()
-
+        print("post------------------------------")
         return redirect('/main_lulu')
 
 @app_lulu.route('/main_lulu')
 def main_lulu2():
-    print("#####")
-    print(app_lulu.questions)
+ #   print("#####")
+ #   print(app_lulu.questions)
     if len(app_lulu.questions)==0 : return render_template('end_lulu.html')
     return redirect('/next_lulu')
 

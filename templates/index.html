@@ -27,6 +27,29 @@
         </div>
       </div>
     </div>
+	
+	<br><br><br>
+	<h4>
+      Please enter the stock ticker (e.g. AAPL).
+    </h4>
+
+    <form id='userinfoform_lulu' method='post' action='/' >
+      <p>
+    Ticker symbol: <input type='text' name='myticker' />
+      </p>
+      <p>
+    <input type='submit' value='Submit' />
+      </p>
+    </form>
+	
+	 {{ div_chart | safe }}
+	   {{ script_chart | safe }}
+	
+	
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.js"></script>
+
+
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
