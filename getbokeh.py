@@ -13,10 +13,10 @@ def get_df_from_ticker(ticker) -> pd.DataFrame:
     quandl.ApiConfig.api_key = "oidGzZN8eMyV6V6thRoT"
     return quandl.get_table('WIKI/PRICES', qopts = { 'columns': ['ticker', 'date', 'close'] }, ticker = [ticker], date = { 'gte': '2016-01-01', 'lte': '2016-12-31' })
 
-def bokeh(ticker):
+def bokeh(ticker: str):
     data = get_df_from_ticker(ticker)
     p = figure(plot_height=600, plot_width=700,
-               title="Quandl WIKI Stock price", x_axis_type='datetime')
+               title="Quandl WIKI Stock price: " + ticker.upper(), x_axis_type='datetime')
 
     x = np.arange(0,10,0.1)
     y = np.sin(x)
