@@ -45,26 +45,34 @@
 
   <div class="starter-template">
     <h1>Bootstrap starter template</h1>
-    <p class="lead"><br><br>Enter ticker</p>
+    <p class="lead"><br>This simple app plots the price data of a given stock in the year 2016.<br>Please enter the stock ticker below (e.g. AAPL).</p>
+	
+    <form id='userinfoform_lulu' method='post' action='/' >
+      <p>
+    Ticker symbol: <input type='text' name='myticker' />
+      </p>
+      <p>
+    <input type='submit' value='Submit' />
+      </p>
+    </form>
+	
+	 {{ div_chart | safe }}
+	   {{ script_chart | safe }}	
+	
+	
+	
   </div>
 
 </main><!-- /.container -->
 	
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    <div class="container">
+ 
+
+	   
+	   
+	   <br><br><br><br><br>
+	   
+	       <div class="container">
       <div class="row">
         <div class="col-lg-12 text-left">
           <h2>Some links:</h2>
@@ -78,26 +86,6 @@
         </div>
       </div>
     </div>
-	
-	<br><br><br>
-	<h4>
-      Please enter the stock ticker (e.g. AAPL).
-    </h4>
-
-    <form id='userinfoform_lulu' method='post' action='/' >
-      <p>
-    Ticker symbol: <input type='text' name='myticker' />
-      </p>
-      <p>
-    <input type='submit' value='Submit' />
-      </p>
-    </form>
-	
-	 {{ div_chart | safe }}
-	   {{ script_chart | safe }}
-	   
-	   
-	   <br><br><br><br><br>
 	
 	
 <script src="https://cdn.pydata.org/bokeh/release/bokeh-1.4.0.min.js"></script>
